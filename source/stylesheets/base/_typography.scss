@@ -35,7 +35,7 @@ body {
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-block;
   background-image: linear-gradient(
     to right,
@@ -52,6 +52,21 @@ body {
   user-select: none;
 
   &:hover {
-    transform: skewY(1deg);
+    transform: skewY(0deg) skewX(17deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.01);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }
