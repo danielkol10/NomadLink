@@ -68,7 +68,8 @@
 
   &:link,
   &:visited {
-    font-size: $default-font-size;
+    font-size: 1.9rem;
+    font-weight: 700;
     color: $color-primary;
     display: inline-block;
     text-decoration: none;

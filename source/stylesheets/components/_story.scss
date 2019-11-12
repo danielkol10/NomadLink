@@ -1,0 +1,68 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    background-clip: $color-white;
+    background-color: rgba($color-white, .6);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    // in css you cant have 2 transform properties applying at the same time
+    transform: skewX(-12deg);
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        // this property has to have a float, height and width defined.
+        shape-outside: circle(50% at 50% 50%);
+        // clipping the shape to look like a circle
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(12deg);
+        // set position of caption parent
+        position: relative;
+        // fix line to the right side of the image
+        overflow: hidden;
+    }
+
+    &__image {
+        height: 100%;
+        // dont use percentages on scale()
+        transform: translateX(-3rem) scale(1.4);
+        transition: all 0.3s;
+    }
+
+    &__text {
+        // unskew the text from the story skew
+        transform: skewX(12deg);
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.5s;
+
+        // remove the little shake after animation
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__image {
+        transform: translateX(-3rem) scale(1);
+        // apply filter to image
+        // value over 100% is brighter and lower than 100% is darker
+        filter: blur(3px) brightness(80%);
+    }
+}
