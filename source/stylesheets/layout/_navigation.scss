@@ -1,0 +1,103 @@
+.navigation {
+    &__checkbox {
+        // hide original html checkbox
+        display: none;
+    }
+
+    &__button {
+        background-color: $color-white;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+    }
+
+    &__background {
+        // make a circle
+        height: 6rem;
+        width: 7rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        // works on position defined elements (in this case :fixed;)
+        z-index: 1000;
+        // radial gradient starts in the middle and goes to all directions
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        transition: transform 0.8s;
+
+        // transform: scale(80);
+    }
+
+    &__nav {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+        opacity: 0;
+        // hide the pointers when the menu is transparent
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__item {
+        margin: 1rem;
+        overflow: hidden;
+
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            // inline block so that transform and padding work
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 350;
+            padding: 1rem 2.5rem;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            // 0 to 50% orangered, from 50% on its another color
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 230%;
+            transition: all .3s;
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary;
+            transform: translateX(1rem);
+
+        }
+    }
+
+    // general sibling selector ~
+    &__checkbox:checked~&__background {
+        transform: scale(80);
+    }
+
+    // general sibling selector ~
+    &__checkbox:checked~&__nav {
+        opacity: 1;
+        left: 0;
+    }
+}

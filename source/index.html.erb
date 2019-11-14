@@ -1,3 +1,17 @@
+<div class="navigation">
+  <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+  <label for="nav-toggle" class="navigation__button">MENU</label>
+  <div class="navigation__background">&nbsp;</div>
+  <nav class="navigation__nav">
+    <ul class="navigation__list">
+      <li class="navigation__item"><a href="#" class="navigation__link">About NomadGo</a></li>
+      <li class="navigation__item"><a href="#" class="navigation__link">Popular destinations</a></li>
+      <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
+      <li class="navigation__item"><a href="#" class="navigation__link">Go Now</a></li>
+      <li class="navigation__item"><a href="#" class="navigation__link">Last item</a></li>
+    </ul>
+  </nav>
+</div>
 <header class="header">
   <div class="header__logo-box">
     <img src="images/logo-white.png" alt="Logo" class="header__logo" />
@@ -259,12 +273,55 @@
                     <input type="email" class="form__input" id="email" placeholder="Email Address" required>
                     <label for="email" class="form__label">Email Address</label>
                   </div>
+                  <div class="form__group u-margin-bottom-medium">
+                    <div class="form__radio-group">
+                      <input type="radio" class="form__radio-input" id="small" name="budget">
+                      <label for="small" class="form__radio-label">
+                        <!-- Cant style form radio buttons with css so we create our own radio button with span -->
+                        <span class="form__radio-button"></span>
+                        Low Budget</label>
+                    </div>
+                    <div class="form__radio-group">
+                      <input type="radio" class="form__radio-input" id="large" name="budget">
+                      <label for="large" class="form__radio-label">
+                        <!-- Cant style form radio buttons with css so we create our own radio button with span -->
+                        <span class="form__radio-button"></span>
+                        High Budget
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form__group">
+                    <button class="btn btn--green">Next Step &rarr;</button>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
         </section>
       </main>
+      <footer class="footer">
+        <div class="footer__logo-box">
+          <img src="images/logo-green-2x.png" alt="Full logo" class="footer__logo">
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="footer__navigation">
+              <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <p class="footer__copyright">
+              Built by <a href="#">Daniel K Adam</a>
+            </p>
+          </div>
+        </div>
+      </footer>
       <!-- <section class="grid-test">
   <div class="row">
     <div class="col-1-of-2">
