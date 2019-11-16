@@ -1,0 +1,64 @@
+.popup {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: $color-black, $alpha: 0.8);
+    z-index: 3000;
+
+    // hide the popup
+    opacity: 0;
+    visibility: hidden;
+
+
+
+    &__content {
+        @include absoluteCenter;
+        width: 75%;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color: $color-black, $alpha: 0.2);
+        border-radius: 3px;
+        overflow: hidden;
+        // Create equal boxes
+        display: table;
+
+    }
+
+    &__left {
+        width: 33.333333333%;
+        // Create equal boxes
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &__right {
+        width: 66.666666667%;
+        padding: 3rem 5rem;
+
+        // Create equal boxes
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        background-size: cover;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        column-count: 2;
+        column-gap: 4rem;
+        // column border
+        column-rule: 1px solid $color-grey-light-2;
+
+        // automatically hyphenate text, need to define it in <html lang="en">.
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+}
