@@ -28,7 +28,7 @@
 
 
   @include respond(tab-port) {
-    padding: 15rem 0;
+    padding: 10rem 0;
   }
 }
 
@@ -73,12 +73,39 @@
     url(../images/nat-10.jpg);
 
   background-size: cover;
-  height: 50rem;
   border-radius: $default-border-radius;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(105deg,
+        /*
+increase the form size to 65% of the screen        */
+        rgba($color-white, .9) 0%,
+        rgba($color-white, .9) 65%,
+        transparent 65%),
+      url(../images/nat-10.jpg);
+  }
+
+  @include respond(tab-port) {
+    // direction of gradient
+    background-image: linear-gradient(to right,
+        rgba($color-white, .9) 0%,
+        rgba($color-white, .9) 100%),
+      url(../images/nat-10.jpg);
+  }
 
   &__form {
     width: 50%;
     padding: 6rem;
+
+    /*
+increase the form size to 65% of the screen        */
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }

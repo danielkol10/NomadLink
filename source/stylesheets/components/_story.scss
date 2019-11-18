@@ -11,6 +11,16 @@
     // in css you cant have 2 transform properties applying at the same time
     transform: skewX(-12deg);
 
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -24,6 +34,11 @@
         position: relative;
         // fix line to the right side of the image
         overflow: hidden;
+
+        // repeat the exact effect line when changing effects
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__image {
@@ -36,6 +51,10 @@
     &__text {
         // unskew the text from the story skew
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {

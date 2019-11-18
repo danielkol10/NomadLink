@@ -20,6 +20,10 @@
         display: block;
         transition: all 0.2s;
 
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
         &:focus {
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -59,6 +63,11 @@
     &__radio-group {
         width: 45%;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     // hide the html unstyled radio
