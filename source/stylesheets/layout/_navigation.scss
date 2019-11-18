@@ -20,6 +20,17 @@
 
         // remove the text mouse highlighting option
         user-select: none;
+
+        // make the button closer to the corner on mobile
+        @include respond(tab-port) {
+            top: 4.4rem;
+            right: 4.4rem;
+        }
+
+        @include respond(phone) {
+            top: 3.4rem;
+            right: 3.4rem;
+        }
     }
 
     &__background {
@@ -39,6 +50,17 @@
 
         // remove the text mouse highlighting option
         user-select: none;
+
+        // make the button closer to the corner on mobile
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {
