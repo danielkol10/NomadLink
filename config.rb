@@ -9,6 +9,13 @@ end
 
 activate :livereload
 
+set :relative_links, true
+set :partials_dir, 'partials'
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+set :build_dir, 'public_html'
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
