@@ -48,4 +48,7 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
-set :relative_links, true
+set :js_dir, 'javascripts'
+set :css_dir, 'stylesheets'
+set :fonts_dir, 'assets/fonts'
+set :images_dir, 'assets/images'
