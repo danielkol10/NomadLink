@@ -175,9 +175,15 @@
 
 
 
-    // MEDIA QUERY TABLET
 
-    @include respond(tab-port) {
+
+
+
+
+    // MEDIA QUERY TABLET + only if touch device
+    // @include respond(tab-port) {
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover: none) {
         // functionality
         height: auto;
         border-radius: 3px;

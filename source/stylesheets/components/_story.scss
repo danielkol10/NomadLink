@@ -27,13 +27,22 @@
         float: left;
         // this property has to have a float, height and width defined.
         shape-outside: circle(50% at 50% 50%);
-        // clipping the shape to look like a circle
-        clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
+        // clipping the shape to look like a circle
+        // clip-path: circle(50% at 50% 50%);
         // set position of caption parent
         position: relative;
         // fix line to the right side of the image
         overflow: hidden;
+
+
+        // if css is supported then apply
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            // clipping the shape to look like a circle
+            clip-path: circle(50% at 50% 50%);
+            width: 15rem;
+            height: 15rem;
+        }
 
         // repeat the exact effect line when changing effects
         @include respond(phone) {

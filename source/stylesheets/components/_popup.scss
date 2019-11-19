@@ -13,6 +13,11 @@
     visibility: hidden;
 
 
+    // browser support graceful degradation
+    // if supported then run that same css code
+    @supports (backdrop-filter: blur(4px)) {
+        backdrop-filter: blur(4px);
+    }
 
 
     &__content {
