@@ -99,11 +99,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
     sassc (2.2.1)
       ffi (~> 1.9)
     servolux (0.13.0)
@@ -126,7 +121,7 @@ DEPENDENCIES
   middleman (~> 4.3, >= 4.3.5)
   middleman-autoprefixer (~> 2.7)
   middleman-livereload (~> 3.4.3)
-  sass (~> 3.4, >= 3.4.22)
+  sassc
   tzinfo-data
   wdm (~> 0.1)
 
